@@ -70,5 +70,18 @@ namespace Hero_overloading_operators
         {
             Console.WriteLine($"{Name} is speaking ");
         }
+        
+        public static Hero operator +(Hero a, Hero b)
+        {
+            return new Hero(a.Name, a.Health + b.Health, a.Energy + b.Energy, a.Magic, a.Weapon);
+        }
+        //This method accepts two operands (type Hero) and creates a new object of class Hero using internal standart constructor with next parrametrs:
+        //Name (name from the first operand)
+        //Health (sum of helth levels from first and second operands)
+        //Energy (sum of energy levels from first and second operands)
+        //Magic and Weapon (values from first operand)
+      
+
+
     }
 }
