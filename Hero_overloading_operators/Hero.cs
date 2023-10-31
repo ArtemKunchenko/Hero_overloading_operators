@@ -114,7 +114,7 @@ namespace Hero_overloading_operators
         //Name (name from the first operand)
         //Health (multiplication of helth level from first operands and particular value)
         //Energy (multiplication of helth level from first operands and particular value)
-        //Magic and Weapon (values from first operand)
+        //Magic and Weapon (values from first operand)/
 
     }
 }

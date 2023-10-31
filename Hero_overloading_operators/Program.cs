@@ -16,7 +16,7 @@ namespace Hero_overloading_operators
             Console.WriteLine();
             //Hero sum = player + support;
             //Hero sub = player - enemy;
-            Hero mul = enemy * 2;
+            Hero mul = enemy * 5;
             mul.ShowHero();
             Console.ReadKey();
         }
