@@ -101,13 +101,20 @@ namespace Hero_overloading_operators
             hero.Weapon = a.Weapon;
             return hero;
         }
-        //This method accepts two operands (type Hero) and creates a new object of class Hero using internal standart constructor with next parrametrs:
+        //This method accepts two operands (type Hero) and creates a new object of class Hero using internal standart constructor without parrametrs. Then acordin to conditon fields in object accepts next values:
         //Name (name from the first operand)
         //Health (if health level of first operand more then second, health level of new object is subtraction  of helth levels from first and second operands, else helth level of new object assigns value 0)
         //Energy (if energy level of first operand more then second, energy level of new object is subtraction  of helth levels from first and second operands, else energy level of new object assigns value 0)
         //Magic and Weapon (values from first operand)
-
-
+        public static Hero operator *(Hero a, int b)
+        {
+            return new Hero(a.Name, a.Health * b, a.Energy * b, a.Magic, a.Weapon);
+        }
+        //This method accepts two operands (type Hero and type int) and creates a new object of class Hero using internal standart constructor with next parrametrs:
+        //Name (name from the first operand)
+        //Health (multiplication of helth level from first operands and particular value)
+        //Energy (multiplication of helth level from first operands and particular value)
+        //Magic and Weapon (values from first operand)
 
     }
 }
