@@ -8,6 +8,12 @@ namespace Hero_overloading_operators
         public string Name { get; set; }
         public int Damage { get; set; }
         public int Level { get; set; }
+        public Magic() 
+        {
+            Name = "";
+            Damage = 0; 
+            Level = 0;  
+        }
         public Magic(string name, int damage, int level)
         {
             Name = name;
