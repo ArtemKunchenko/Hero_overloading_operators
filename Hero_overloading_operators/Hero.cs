@@ -15,7 +15,7 @@ namespace Hero_overloading_operators
             Name = "";
             Health = 0;
             Energy = 0;
-            Magic = new Magic();   
+            Magic = new Magic();
             Weapon = new Weapon();
 
         }
@@ -79,7 +79,7 @@ namespace Hero_overloading_operators
         {
             Console.WriteLine($"{Name} is speaking ");
         }
-        
+
         public static Hero operator +(Hero a, Hero b)
         {
             return new Hero(a.Name, a.Health + b.Health, a.Energy + b.Energy, a.Magic, a.Weapon);
@@ -126,5 +126,25 @@ namespace Hero_overloading_operators
         //Energy (division of helth level from first operands and particular value)
         //Magic and Weapon (values from first operand)
         //Also, there is cheacking second operand on value 0. If second operand has value 0, it accepts valuel 1 and levels of health and energy aren`t chenging.
+        public static bool operator ==(Hero a, Hero b)
+        {
+            return a.Health == b.Health && a.Energy == b.Energy;
+        }
+        //This method accepts two operands (type Hero) and compares the level of health and energy of each object. If the condition is met the method returns  "true", otherwise "false"
+        public static bool operator !=(Hero a, Hero b)
+        {
+            return a.Health != b.Health && a.Energy != b.Energy;
+        }
+        //This method accepts two operands (type Hero) and compares the level of health and energy of each object. If the condition is met the method returns  "true", otherwise "false"
+        public static bool operator >(Hero a, Hero b)
+        {
+            return a.Health > b.Health && a.Energy > b.Energy;
+        }
+        //This method accepts two operands (type Hero) and compares the level of health and energy of each object. If the condition is met the method returns  "true", otherwise "false"
+        public static bool operator <(Hero a, Hero b)
+        {
+            return a.Health < b.Health && a.Energy < b.Energy;
+        }
+        //This method accepts two operands (type Hero) and compares the level of health and energy of each object. If the condition is met the method returns  "true", otherwise "false"
     }
 }
