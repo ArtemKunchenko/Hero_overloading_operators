@@ -115,6 +115,16 @@ namespace Hero_overloading_operators
         //Health (multiplication of helth level from first operands and particular value)
         //Energy (multiplication of helth level from first operands and particular value)
         //Magic and Weapon (values from first operand)/
-
+        public static Hero operator /(Hero a, int b)
+        {
+            if (b <= 0) b = 1;
+            return new Hero(a.Name, a.Health / b, a.Energy / b, a.Magic, a.Weapon);
+        }
+        //This method accepts two operands (type Hero and type int) and creates a new object of class Hero using internal standart constructor with next parrametrs:
+        //Name (name from the first operand)
+        //Health (division of helth level from first operands and particular value)
+        //Energy (division of helth level from first operands and particular value)
+        //Magic and Weapon (values from first operand)
+        //Also, there is cheacking second operand on value 0. If second operand has value 0, it accepts valuel 1 and levels of health and energy aren`t chenging.
     }
 }
